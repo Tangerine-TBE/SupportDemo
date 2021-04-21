@@ -94,10 +94,25 @@
             app:layout_constraintTop_toBottomOf="@+id/bloodFat"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="总胆固醇"
+            android:id="@+id/Chol"
+            app:layout_constraintTop_toBottomOf="@+id/OneLeadEcg"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="竹信单导心电"
+            android:id="@+id/zuXinEcg"
+            app:layout_constraintTop_toBottomOf="@+id/Chol"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:layout_height="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_value"
-            app:layout_constraintTop_toBottomOf="@id/bmi"
+            app:layout_constraintTop_toBottomOf="@id/zuXinEcg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:textSize="23sp"

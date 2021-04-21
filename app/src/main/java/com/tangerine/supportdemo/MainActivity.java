@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AppCompatButton btnBloodFat;
     private AppCompatButton btnBmi;
     private AppCompatButton btnOneLeadEcg;
+    private AppCompatButton btnChol;
+    private AppCompatButton btnEcgOneLead;
 
 
     @Override
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnOneLeadEcg = findViewById(R.id.OneLeadEcg);
+        btnEcgOneLead = findViewById(R.id.zuXinEcg);
         btnEcg = findViewById(R.id.ECG);
         btnBloodFat = findViewById(R.id.bloodFat);
         btnBmi = findViewById(R.id.bmi);
@@ -46,7 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTemp = findViewById(R.id.Temp);
         btnSpo = findViewById(R.id.spo);
         tvValue = findViewById(R.id.tv_value);
+        btnChol = findViewById(R.id.Chol);
         btnOneLeadEcg.setOnClickListener(this);
+        btnEcgOneLead.setOnClickListener(this);
+        btnChol.setOnClickListener(this);
         btnBloodFat.setOnClickListener(this);
         btnBmi.setOnClickListener(this);
         btnNibp.setOnClickListener(this);
@@ -109,6 +115,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             }else if(v == btnOneLeadEcg){
                 intent.putExtra("Content", "单导心电界面");
+                intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
+            }else if (v == btnChol){
+                intent.putExtra("Content","总胆固醇界面");
+                intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
+            }else if (v == btnEcgOneLead){
+                intent.putExtra("Content","竹信单导心电界面");
+                intent.putExtra("Gender",1);//1 nan 2 nv;
+                intent.putExtra("Name","谭伯恩");
+                intent.putExtra("DateOfBirth","1997-12-16");
+                intent.putExtra("IdCard","440224199712161799");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             }
             else {
