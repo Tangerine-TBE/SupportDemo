@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             Intent intent = new Intent();
             if (v == btnUa) {
-                intent.putExtra("Content", "尿酸界面");
+                intent.putExtra("Content", "ua");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnGlu) {
-                intent.putExtra("Content", "血糖界面");
+                intent.putExtra("Content", "glu");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnEcg) {
-                intent.putExtra("Content", "心电图界面");
+                intent.putExtra("Content", "ecg");
                 EcgPersonInfo ecgPersonInfo = new EcgPersonInfo();
                 ecgPersonInfo.Birth_Day = "25";
                 ecgPersonInfo.Birth_Month = "8";
@@ -93,34 +93,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("EcgData", GsonUtil.toJson(ecgPersonInfo));
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnSpo) {
-                intent.putExtra("Content", "血氧界面");
+                intent.putExtra("Content", "spo");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnNibp) {
-                intent.putExtra("Content", "血压界面");
+                intent.putExtra("Content", "nibp");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnTemp) {
-                intent.putExtra("Content", "体温界面");
+                intent.putExtra("Content", "temp");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnUrine) {
-                intent.putExtra("Content", "尿常规界面");
+                intent.putExtra("Content", "urt");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnIdcard) {
                 intent.putExtra("Content", "身份证界面");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnBloodFat) {
-                intent.putExtra("Content", "血脂界面");
+                intent.putExtra("Content", "bloodFat");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnBmi) {
-                intent.putExtra("Content", "体成分界面");
+                intent.putExtra("Content", "bmi");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             }else if(v == btnOneLeadEcg){
-                intent.putExtra("Content", "单导心电界面");
+                intent.putExtra("Content", "ecgOneLead");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             }else if (v == btnChol){
-                intent.putExtra("Content","总胆固醇界面");
+                intent.putExtra("Content","chol");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             }else if (v == btnEcgOneLead){
-                intent.putExtra("Content","竹信单导心电界面");
+                intent.putExtra("Content","ecgOneLead_IKL");
                 intent.putExtra("Gender",1);//1 nan 2 nv;
                 intent.putExtra("Name","谭伯恩");
                 intent.putExtra("DateOfBirth","1997-12-16");
