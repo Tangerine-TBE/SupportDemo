@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private AppCompatButton btnNibp;
     private AppCompatButton btnIdcard;
@@ -75,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         try {
             Intent intent = new Intent();
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
             if (v == btnUa) {
                 intent.putExtra("Content", "ua");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
