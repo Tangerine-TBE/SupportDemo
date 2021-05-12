@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
             if (v == btnUa) {
                 intent.putExtra("Content", "ua");
+                intent.putExtra("Gender","1");
                 intent.setAction("cn.com.dihealth.ExtCheckUpActivity");
             } else if (v == btnGlu) {
                 intent.putExtra("Content", "glu");
